@@ -1,0 +1,65 @@
+/* HelloWorld component styles - Mobile-first responsive design (US-002) */
+
+.hello-world-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hello-world-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+  
+  /* Responsive font sizing for better readability across devices */
+  line-height: 1.2;
+  
+  /* Ensure text scales well on different devices */
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .hello-world-heading {
+    font-size: 2.5rem;
+  }
+  
+  .hello-world-container {
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .hello-world-heading {
+    font-size: 3rem;
+  }
+  
+  .hello-world-container {
+    min-height: 300px;
+    padding: 2rem;
+  }
+}
+
+/* High contrast mode support for accessibility */
+@media (prefers-contrast: high) {
+  .hello-world-heading {
+    color: #000;
+    font-weight: 700;
+  }
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hello-world-heading {
+    transition: none;
+  }
+}
